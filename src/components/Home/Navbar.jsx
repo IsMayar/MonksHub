@@ -1,8 +1,5 @@
-import {
-  navbarLinks,
-  navbarCTA,
-  navbarLogo,
-} from "../../constants/navbar_constants";
+import { navbarLinks, navbarLogo } from "../../constants/index";
+import CustomButton from "../Common/CustomButton";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -29,9 +26,7 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div>
-          <a href={navbarCTA.href} className={navbarCTA.classes}>
-            {navbarCTA.label}
-          </a>
+          <CustomButton text="Get this template" />
         </div>
       </nav>
     </header>

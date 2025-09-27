@@ -1,0 +1,17 @@
+import {
+  categories,
+  developmentCourse,
+  UIUX,
+  marketingCourse,
+  accounting,
+  ProjectManagement,
+  popular,
+  lectures,
+  timeSpan,
+  UIUXDesign,
+  marketing,
+  development,
+  UxResearch,
+  FinancialAcc,
+  DigitalMarketing,
+} from "../images_constants";
