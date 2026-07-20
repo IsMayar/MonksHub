@@ -1,7 +1,8 @@
 {
-  "name": "vite-project",
+  "name": "monkshub-frontend",
   "private": true,
   "version": "0.0.0",
+  "description": "A polished mentor-led learning platform frontend built with React, TypeScript, Tailwind, shadcn-style UI primitives, and Framer Motion.",
   "type": "module",
   "scripts": {
     "dev": "vite",
