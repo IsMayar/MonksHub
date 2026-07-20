@@ -71,7 +71,7 @@ export function SectionIntro({
       {eyebrow && (
         <p
           className={cn(
-            "mb-3 text-sm font-bold uppercase",
+            "mb-3 text-sm font-bold uppercase tracking-normal",
             tone === "dark" ? "text-emerald-200" : "text-emerald-700"
           )}
         >
@@ -80,7 +80,7 @@ export function SectionIntro({
       )}
       <h2
         className={cn(
-          "text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl",
+          "text-3xl font-bold leading-tight tracking-normal sm:text-4xl lg:text-5xl",
           tone === "dark" ? "text-white" : "text-slate-950"
         )}
       >
@@ -103,13 +103,13 @@ export function SectionIntro({
 export function HeroSection() {
   return (
     <section className="surface-grid overflow-hidden border-b border-slate-200 bg-white">
-      <div className="container grid gap-12 py-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-20">
+      <div className="container grid gap-10 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: "easeOut" }}
         >
-          <div className="mb-6 flex flex-wrap gap-2">
+          <div className="mb-5 flex flex-wrap gap-2">
             {["Spring cohort open", "Mentor-led", "Project-based"].map((item) => (
               <Badge key={item} variant={item === "Spring cohort open" ? "success" : "muted"}>
                 {item}
@@ -120,10 +120,10 @@ export function HeroSection() {
           <p className="text-sm font-bold uppercase text-emerald-700">
             {brand.name} career studio
           </p>
-          <h1 className="mt-3 max-w-4xl text-4xl font-black leading-tight text-slate-950 sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 max-w-4xl text-4xl font-black leading-tight tracking-normal text-slate-950 sm:text-5xl lg:text-6xl">
             Build a portfolio employers can actually trust.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
             MonksHub pairs focused online courses with weekly mentor reviews,
             live studios, and career-ready projects for designers, developers,
             marketers, and operators.
@@ -142,11 +142,13 @@ export function HeroSection() {
             </Link>
           </div>
 
-          <div className="mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="mt-8 grid max-w-2xl grid-cols-3 gap-5 border-t border-slate-200 pt-6">
             {metrics.slice(0, 3).map((metric) => (
-              <div key={metric.label} className="rounded-lg border border-slate-200 bg-white p-4">
-                <p className="text-2xl font-black text-slate-950">{metric.value}</p>
-                <p className="mt-1 text-sm text-slate-600">{metric.label}</p>
+              <div key={metric.label}>
+                <p className="text-xl font-black text-slate-950 sm:text-2xl">{metric.value}</p>
+                <p className="mt-1 text-xs font-medium leading-5 text-slate-600 sm:text-sm">
+                  {metric.label}
+                </p>
               </div>
             ))}
           </div>
@@ -158,12 +160,12 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
           className="relative"
         >
-          <div className="rounded-lg border border-slate-200 bg-stone-50 p-3 shadow-soft">
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 shadow-soft">
             <div className="grid gap-3 sm:grid-cols-[0.8fr_1.2fr]">
               <img
                 src={programs[0].image}
                 alt="Frontend student project preview"
-                className="h-72 w-full rounded-md object-cover sm:h-full"
+                className="h-64 w-full rounded-md object-cover sm:h-full"
               />
               <div className="grid gap-3">
                 <img
@@ -203,12 +205,18 @@ export function HeroSection() {
 
 export function MetricsBand() {
   return (
-    <section className="bg-stone-50 py-10">
+    <section className="border-b border-slate-200 bg-slate-50 py-10">
       <div className="container grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {metrics.map((metric) => (
-          <div key={metric.label} className={cn("rounded-lg p-5", metric.tone)}>
-            <p className="text-3xl font-black text-slate-950">{metric.value}</p>
-            <p className="mt-1 text-sm font-medium text-slate-700">{metric.label}</p>
+          <div
+            key={metric.label}
+            className={cn(
+              "rounded-lg border border-l-4 border-slate-200 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)]",
+              metric.tone
+            )}
+          >
+            <p className="text-3xl font-black tracking-normal text-slate-950">{metric.value}</p>
+            <p className="mt-1 text-sm font-medium text-slate-600">{metric.label}</p>
           </div>
         ))}
       </div>
@@ -262,12 +270,12 @@ export function ProgramCard({
       transition={{ duration: 0.35, delay: index * 0.05 }}
       whileHover={{ y: -4 }}
       className={cn(
-        "overflow-hidden rounded-lg border bg-white shadow-sm transition-shadow hover:shadow-soft",
+        "flex h-full flex-col overflow-hidden rounded-lg border bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)] transition-shadow hover:shadow-soft",
         program.accent
       )}
     >
-      <img src={program.image} alt="" className="h-52 w-full object-cover" />
-      <div className="p-5">
+      <img src={program.image} alt="" className="h-56 w-full object-cover" />
+      <div className="flex flex-1 flex-col p-5">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Badge variant="success">{program.category}</Badge>
           <span className="text-sm font-bold text-slate-950">{program.price}</span>
@@ -291,6 +299,15 @@ export function ProgramCard({
             <Badge key={tag}>{tag}</Badge>
           ))}
         </div>
+        <div className="mt-auto pt-6">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 hover:text-emerald-800"
+          >
+            Discuss syllabus
+            <FiArrowRight aria-hidden="true" />
+          </Link>
+        </div>
       </div>
     </motion.article>
   );
@@ -298,7 +315,7 @@ export function ProgramCard({
 
 export function LearningPath() {
   return (
-    <section className="bg-stone-50 py-16 lg:py-20">
+    <section className="bg-slate-50 py-16 lg:py-20">
       <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <SectionIntro
           align="left"
@@ -388,7 +405,9 @@ export function MentorCard({ mentor, dark = false }: { mentor: Mentor; dark?: bo
       to={`/mentor/${mentor.id}`}
       className={cn(
         "group block overflow-hidden rounded-lg border transition hover:-translate-y-1",
-        dark ? "border-white/10 bg-white/5" : "border-slate-200 bg-white shadow-sm"
+        dark
+          ? "border-white/10 bg-white/5"
+          : "border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]"
       )}
     >
       <img src={mentor.image} alt={mentor.name} className="h-64 w-full object-cover" />
@@ -409,7 +428,7 @@ export function MentorCard({ mentor, dark = false }: { mentor: Mentor; dark?: bo
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {mentor.skills.map((skill) => (
-            <Badge key={skill} variant={dark ? "default" : "muted"}>
+              <Badge key={skill} variant="muted">
               {skill}
             </Badge>
           ))}
@@ -421,7 +440,7 @@ export function MentorCard({ mentor, dark = false }: { mentor: Mentor; dark?: bo
 
 export function TestimonialsSection() {
   return (
-    <section className="bg-stone-50 py-16 lg:py-20">
+    <section className="bg-slate-50 py-16 lg:py-20">
       <div className="container">
         <SectionIntro
           eyebrow="Student stories"
@@ -481,7 +500,7 @@ export function InsightCard({
   post: (typeof insights)[number];
 }) {
   return (
-    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
       <img src={post.image} alt="" className="h-52 w-full object-cover" />
       <div className="p-5">
         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-500">
@@ -502,7 +521,7 @@ export function FAQSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-stone-50 py-16 lg:py-20">
+    <section className="bg-slate-50 py-16 lg:py-20">
       <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionIntro
           align="left"
@@ -589,7 +608,7 @@ export function CatalogTools({
   onSearchChange: (value: string) => void;
 }) {
   return (
-    <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+    <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
       <div className="grid gap-4 lg:grid-cols-[1fr_0.8fr] lg:items-center">
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (

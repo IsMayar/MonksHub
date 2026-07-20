@@ -34,7 +34,7 @@ export function CoursesPage() {
 
   return (
     <PageFrame>
-      <section className="surface-grid bg-white py-16 lg:py-20">
+      <section className="surface-grid bg-white py-14 lg:py-16">
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-end">
             <SectionIntro
@@ -43,7 +43,7 @@ export function CoursesPage() {
               title="Pick a path with a concrete finish line."
               copy="Browse mentor-led programs built around real deliverables, focused feedback, and skills that can be shown in interviews or team reviews."
             />
-            <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
               <Badge variant="success">Next cohort starts soon</Badge>
               <p className="mt-4 text-sm leading-6 text-slate-600">
                 Unsure where to begin? Tell us your target role and we will map
@@ -71,7 +71,7 @@ export function CoursesPage() {
         </div>
       </section>
 
-      <section className="bg-stone-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="container">
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {filteredPrograms.map((program, index) => (

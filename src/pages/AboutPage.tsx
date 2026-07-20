@@ -11,7 +11,7 @@ import { gallery, learningPath } from "../data/siteContent";
 export function AboutPage() {
   return (
     <PageFrame>
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-white py-14 lg:py-16">
         <div className="container grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <Badge variant="success">About MonksHub</Badge>
@@ -36,7 +36,7 @@ export function AboutPage() {
 
       <MetricsBand />
 
-      <section className="bg-stone-50 py-16 lg:py-20">
+      <section className="bg-slate-50 py-16 lg:py-20">
         <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
           <SectionIntro
             align="left"
@@ -70,7 +70,7 @@ export function AboutPage() {
           />
           <div className="mt-10 grid gap-5 md:grid-cols-4">
             {learningPath.map((step, index) => (
-              <div key={step.title} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+              <div key={step.title} className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
                 <span className="text-sm font-bold text-emerald-700">
                   Week {index + 1}
                 </span>

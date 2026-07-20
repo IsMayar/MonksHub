@@ -12,7 +12,7 @@ export function ContactPage() {
 
   return (
     <PageFrame>
-      <section className="surface-grid bg-white py-16 lg:py-20">
+      <section className="surface-grid bg-white py-14 lg:py-16">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <SectionIntro

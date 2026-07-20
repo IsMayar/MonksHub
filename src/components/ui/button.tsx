@@ -10,8 +10,8 @@ const variants: Record<ButtonVariant, string> = {
   secondary:
     "bg-white text-slate-950 shadow-sm hover:bg-slate-100 focus-visible:ring-slate-500",
   outline:
-    "border border-slate-300 bg-white text-slate-950 hover:bg-slate-100 focus-visible:ring-slate-500",
-  ghost: "text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-500",
+    "border border-slate-300 bg-white text-slate-950 hover:border-slate-400 hover:bg-slate-50 focus-visible:ring-slate-500",
+  ghost: "text-slate-700 hover:bg-slate-100 hover:text-slate-950 focus-visible:ring-slate-500",
   dark: "bg-slate-950 text-white shadow-sm hover:bg-slate-800 focus-visible:ring-slate-950",
 };
 

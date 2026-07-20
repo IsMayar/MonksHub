@@ -60,10 +60,10 @@ export const hero = {
 };
 
 export const metrics = [
-  { value: "12.4K", label: "Learners trained", tone: "bg-emerald-100" },
-  { value: "91%", label: "Completion rate", tone: "bg-amber-100" },
-  { value: "38", label: "Hiring partners", tone: "bg-rose-100" },
-  { value: "4.8/5", label: "Mentor rating", tone: "bg-indigo-100" },
+  { value: "12.4K", label: "Learners trained", tone: "border-l-emerald-500" },
+  { value: "91%", label: "Completion rate", tone: "border-l-blue-500" },
+  { value: "38", label: "Hiring partners", tone: "border-l-violet-500" },
+  { value: "4.8/5", label: "Mentor rating", tone: "border-l-amber-500" },
 ];
 
 export type Program = {
@@ -110,7 +110,7 @@ export const programs: Program[] = [
     lessons: 35,
     price: "$360",
     level: "Beginner friendly",
-    mentor: "Ayesha Rahimi",
+    mentor: "Ayaan Rahimi",
     outcome: "A polished mobile and web product case study",
     tags: ["Figma", "Research", "Systems"],
     accent: "border-rose-200",
@@ -126,7 +126,7 @@ export const programs: Program[] = [
     lessons: 28,
     price: "$310",
     level: "All levels",
-    mentor: "Lina Moreno",
+    mentor: "Leo Moreno",
     outcome: "A complete acquisition campaign plan",
     tags: ["SEO", "Ads", "Analytics"],
     accent: "border-amber-200",
@@ -142,7 +142,7 @@ export const programs: Program[] = [
     lessons: 31,
     price: "$330",
     level: "Beginner friendly",
-    mentor: "Hina Patel",
+    mentor: "Haris Patel",
     outcome: "A finance dashboard and board-ready report",
     tags: ["Excel", "SQL", "Forecasting"],
     accent: "border-indigo-200",
@@ -198,8 +198,8 @@ export type Mentor = {
 
 export const mentors: Mentor[] = [
   {
-    id: "ayesha-rahimi",
-    name: "Ayesha Rahimi",
+    id: "ayaan-rahimi",
+    name: "Ayaan Rahimi",
     role: "Principal Product Designer",
     company: "Studio North",
     image: mentor1,
@@ -207,7 +207,7 @@ export const mentors: Mentor[] = [
     students: "1,860",
     rating: "4.9",
     skills: ["Figma", "Design systems", "UX research"],
-    bio: "Ayesha helps early and mid-career designers turn raw ideas into sharp product stories. Her reviews focus on clarity, hierarchy, and explaining the why behind every screen.",
+    bio: "Ayaan helps early and mid-career designers turn raw ideas into sharp product stories. His reviews focus on clarity, hierarchy, and explaining the why behind every screen.",
     credentials: [
       "12 years in product design",
       "Former design lead for two B2B SaaS teams",
@@ -236,8 +236,8 @@ export const mentors: Mentor[] = [
       "Code review first, then refactor. Learners leave with better judgment, not just working screens.",
   },
   {
-    id: "lina-moreno",
-    name: "Lina Moreno",
+    id: "leo-moreno",
+    name: "Leo Moreno",
     role: "Growth Marketing Strategist",
     company: "Bright Metric",
     image: mentor3,
@@ -245,7 +245,7 @@ export const mentors: Mentor[] = [
     students: "1,420",
     rating: "4.7",
     skills: ["SEO", "Paid media", "Reporting"],
-    bio: "Lina teaches marketers to connect story, experiment design, and analytics so campaigns become measurable business systems.",
+    bio: "Leo teaches marketers to connect story, experiment design, and analytics so campaigns become measurable business systems.",
     credentials: [
       "Managed $8M in paid acquisition spend",
       "Advisor to creator-led education brands",
@@ -274,8 +274,8 @@ export const mentors: Mentor[] = [
       "Learners practice through role-play, product memos, and critique sessions that mirror real team pressure.",
   },
   {
-    id: "hina-patel",
-    name: "Hina Patel",
+    id: "haris-patel",
+    name: "Haris Patel",
     role: "Finance Analytics Consultant",
     company: "Ledger Field",
     image: mentor5,
@@ -283,7 +283,7 @@ export const mentors: Mentor[] = [
     students: "980",
     rating: "4.9",
     skills: ["Forecasting", "SQL", "Dashboards"],
-    bio: "Hina turns finance and analytics training into practical decision support. Her learners build models that explain risk, growth, and next steps.",
+    bio: "Haris turns finance and analytics training into practical decision support. His learners build models that explain risk, growth, and next steps.",
     credentials: [
       "Chartered management accountant",
       "Built FP&A systems for remote-first teams",
@@ -372,7 +372,7 @@ export const insights = [
   {
     title: "How to turn a course project into a hiring case study",
     category: "Career Strategy",
-    author: "Ayesha Rahimi",
+    author: "Ayaan Rahimi",
     readTime: "7 min read",
     image: insight1,
     summary:
@@ -390,7 +390,7 @@ export const insights = [
   {
     title: "A simpler way to plan your first paid campaign",
     category: "Marketing",
-    author: "Lina Moreno",
+    author: "Leo Moreno",
     readTime: "6 min read",
     image: insight3,
     summary:
@@ -408,7 +408,7 @@ export const insights = [
   {
     title: "Financial dashboards that executives actually read",
     category: "Analytics",
-    author: "Hina Patel",
+    author: "Haris Patel",
     readTime: "5 min read",
     image: insight5,
     summary:

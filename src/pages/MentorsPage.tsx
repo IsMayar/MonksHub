@@ -14,7 +14,7 @@ import { mentors, programs } from "../data/siteContent";
 export function MentorsPage() {
   return (
     <PageFrame>
-      <section className="surface-grid bg-white py-16 lg:py-20">
+      <section className="surface-grid bg-white py-14 lg:py-16">
         <div className="container">
           <SectionIntro
             eyebrow="Mentors"
@@ -125,7 +125,7 @@ export function MentorProfilePage() {
       </section>
 
       {relatedPrograms.length > 0 && (
-        <section className="bg-stone-50 py-16">
+        <section className="bg-slate-50 py-16">
           <div className="container">
             <SectionIntro
               align="left"

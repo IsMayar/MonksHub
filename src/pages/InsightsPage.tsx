@@ -22,7 +22,7 @@ export function InsightsPage() {
 
   return (
     <PageFrame>
-      <section className="surface-grid bg-white py-16 lg:py-20">
+      <section className="surface-grid bg-white py-14 lg:py-16">
         <div className="container">
           <SectionIntro
             eyebrow="Insights"
@@ -44,7 +44,7 @@ export function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-stone-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="container grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {filteredInsights.map((post) => (
             <InsightCard key={post.title} post={post} />

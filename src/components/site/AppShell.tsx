@@ -12,7 +12,7 @@ type AppShellProps = {
 
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-stone-50 text-slate-950">
+    <div className="min-h-screen bg-slate-50 text-slate-950">
       <Navbar />
       <main>{children}</main>
       <Footer />
@@ -24,11 +24,10 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-stone-50/90 backdrop-blur">
-      <nav className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={brand.logo} alt="MonksHub logo" className="h-10 w-10" />
-          <span className="text-xl font-bold text-slate-950">{brand.name}</span>
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-[0_1px_0_rgba(15,23,42,0.03)] backdrop-blur">
+      <nav className="container flex h-16 items-center justify-between">
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img src={brand.logo} alt="MonksHub logo" className="h-9 w-auto" />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -39,7 +38,7 @@ function Navbar() {
               className={({ isActive }) =>
                 cn(
                   "rounded-md px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-white hover:text-slate-950",
-                  isActive && "bg-white text-slate-950 shadow-sm"
+                  isActive && "bg-slate-950 text-white shadow-sm hover:bg-slate-950 hover:text-white"
                 )
               }
             >
@@ -51,7 +50,7 @@ function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             to="/contact"
-            className={buttonStyles({ variant: "dark", size: "default" })}
+            className={buttonStyles({ variant: "dark", size: "default", className: "shadow-sm" })}
           >
             Book a call
             <FiArrowRight aria-hidden="true" />
@@ -59,7 +58,7 @@ function Navbar() {
         </div>
 
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-950 lg:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-slate-300 bg-white text-slate-950 shadow-sm lg:hidden"
           type="button"
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
@@ -74,7 +73,7 @@ function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-slate-200 bg-stone-50 lg:hidden"
+            className="overflow-hidden border-t border-slate-200 bg-white lg:hidden"
           >
             <div className="container grid gap-2 py-4">
               {navItems.map((item) => (
@@ -85,7 +84,7 @@ function Navbar() {
                   className={({ isActive }) =>
                     cn(
                       "rounded-md px-3 py-3 text-sm font-semibold text-slate-700",
-                      isActive ? "bg-white text-slate-950 shadow-sm" : "hover:bg-white"
+                      isActive ? "bg-slate-950 text-white shadow-sm" : "hover:bg-slate-50"
                     )
                   }
                 >
@@ -106,8 +105,7 @@ function Footer() {
       <div className="container grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="max-w-md">
           <div className="flex items-center gap-3">
-            <img src={brand.logo} alt="" className="h-10 w-10 rounded-md bg-white p-1" />
-            <span className="text-xl font-bold">{brand.name}</span>
+            <img src={brand.logo} alt="MonksHub" className="h-9 w-auto rounded-md bg-white p-1" />
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-300">{brand.promise}</p>
           <p className="mt-6 text-sm text-slate-400">
